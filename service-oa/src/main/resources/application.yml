@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: service-oa
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://172.24.234.146/cloud-oa?characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: 123456
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  redis:
+    host: 172.24.234.146
+    port: 6379
+    password: 123123
+    database: 0
+
+server:
+  port: 8081
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:top/wann/auth/mapper/xml/**.xml
